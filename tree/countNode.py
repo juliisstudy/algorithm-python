@@ -1,5 +1,4 @@
-def countNode(self,root:TreeNode) ->int:
-    if not root:
+def countNodes(self, root: Optional[TreeNode]) -> int:
+      if root is None:
         return 0
-    else :
-        self.countNode(root.right)+self.countNodes(root.left)
+      return 1 + self.countNodes(root.left) + self.countNodes(root.right)
